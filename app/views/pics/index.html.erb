@@ -1,4 +1,11 @@
-<% @pics.each do |pic| %>
-	<%= link_to (image_tag pic.image.url(:medium)), pic %>
-	<h2><%= link_to pic.title, pic %></h2>
-<% end %>
+
+<div class="col-md-6 col-md-offset-3">
+	<div class="pics transitions-enabled">
+		<% @pics.each do |pic| %>
+	</div>
+		<div class="box panel panel-default">
+		<center><%= link_to (image_tag pic.image.url(:medium)), pic %></center>
+		<h2><%= link_to pic.title, pic %></h2>
+		<% end %>
+	</div>
+</div>
