@@ -3,12 +3,12 @@ class PicsController < ApplicationController
 
 
 	def index
-		@pics = Pic.all.order("created_at DESC")
+		@pics = Pic.all
 
 	end
 
 	def show
-
+		
 	end
 
 
