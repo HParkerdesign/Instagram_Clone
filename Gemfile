@@ -22,6 +22,7 @@ gem 'devise'
 gem "paperclip", "~> 5.0.0"
 gem 'masonry-rails', '~> 0.2.4'
 gem 'acts_as_votable', '~> 0.10.0'
+gem 'aws-sdk', '~> 2.3'
 
 
 group :development, :test do
