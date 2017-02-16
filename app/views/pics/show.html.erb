@@ -2,7 +2,7 @@
 	<div class="col-md-6 col-md-offset-3">
 		<div class="panel panel-default">
 			<div class="panel heading pic_image">
-			<center><%= image_tag @pic.image.url, :size => '450', class: "img-fluid" %></center>
+			<center><%= image_tag @pic.image.url, class: "img-fluid" %></center>
 			</div>
 
 		<div class="panel-body">
@@ -23,9 +23,13 @@
 						
 					<% end %>
 
-					<% if user_signed_in? %>
+					<% if @pic.user == current_user %>
 						<%= link_to "Fix Pic", edit_pic_path, class: "btn btn-info" %>
-						<%= link_to "Delete", pic_path, class: "btn btn-danger" %>
+						<%= link_to 'Delete', pic_path, method: :delete, data: {
+          					confirm: 'Are you sure?'}, class: "btn btn-info" %>
+						
+					
+
 					<% end %>
 				</div>
 			</div>
